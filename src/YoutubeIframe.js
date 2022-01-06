@@ -244,6 +244,8 @@ const YoutubeIframe = (props, ref) => {
     const base = baseUrlOverride || DEFAULT_BASE_URL;
     const data = ytScript.urlEncodedJSON;
 
+    console.log('uri', base + '?data=' + data);
+    
     return {uri: base + '?data=' + data};
   }, [useLocalHTML, contentScale, baseUrlOverride, allowWebViewZoom]);
 
